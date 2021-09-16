@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function Comments() {
   return (
-    <div className="App">
+    <div className="Comments">
     </div>
   );
 }
 
-export default App;
+export default Comments;
