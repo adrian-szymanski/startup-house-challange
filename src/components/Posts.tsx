@@ -4,7 +4,7 @@ import axios from "axios";
 
   function Posts() {
 
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = 'https://jsonplaceholder.typicode.com/posts/1';
 
     const [title, setTitle] = useState([]);
     const [body, setBody] = useState([]);
@@ -14,19 +14,16 @@ import axios from "axios";
         setTitle(res.data.title);
         setBody(res.data.body);
       })
-    }, [])
-
-    console.log(title);
+    })
 
     return (
-      <div className="Posts">
-        <Card sx={{width: 275, display: 'flex'}}>
+        <Card sx={{width: 275, display: 'block', mx: '20px', my: "20px"}}>
           <CardContent>
-            <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
+            <Typography sx={{fontSize: 16, fontStyle: 'bold'}} color="text.secondary" gutterBottom>
               {title}
             </Typography>
             <br/>
-            <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
+            <Typography sx={{fontSize: 12}} color="text.secondary" gutterBottom>
               {body}
             </Typography>
           </CardContent>
@@ -34,7 +31,6 @@ import axios from "axios";
             <Button size="small">Full Version</Button>
           </CardActions>
         </Card>
-      </div>
     );
   }
 
